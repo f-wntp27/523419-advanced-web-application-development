@@ -59,11 +59,11 @@
                 <div class="col-md-9">
                   <div class="form-group">
                     <input type="number" class="form-control" min="1" max="50" formControlName="quantity">
-                    <div *ngIf="productForm.get('quantity')?.invalid && (productForm.get('quantity')?.dirty || productForm.get('quantity')?.touched)" class="alert alert-danger">
-                      <div *ngIf="productForm.get('quantity')?.errors?.['required']">
+                    <div *ngIf="productForm.controls.quantity?.invalid && (productForm.controls.quantity?.dirty || productForm.controls.quantity?.touched)" class="alert alert-danger">
+                      <div *ngIf="productForm.controls.quantity?.errors?.['required']">
                         Quantity is required.
                       </div>
-                      <div *ngIf="productForm.get('quantity')?.errors?.['min'] || productForm.get('quantity')?.errors?.['max']">
+                      <div *ngIf="productForm.controls.quantity?.errors?.['min'] || productForm.controls.quantity?.errors?.['max']">
                         Quantity is incorrect (1-50)!!
                       </div>
                     </div>
