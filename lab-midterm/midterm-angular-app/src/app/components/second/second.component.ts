@@ -32,7 +32,7 @@ export class SecondComponent implements OnInit {
     }
     this.productService.getAllProduct().push({
       type: this.productForm.value.type as string,
-      id: this.productForm.value.type as string,
+      id: this.productForm.value.id as string,
       name: this.productForm.value.name as string,
       detail: this.productForm.value.detail as string,
       quantity: Number(this.productForm.value.quantity),
