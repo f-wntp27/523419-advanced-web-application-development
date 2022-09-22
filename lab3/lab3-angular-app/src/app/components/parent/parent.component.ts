@@ -22,11 +22,12 @@ export class ParentComponent implements OnInit,
   textMessage: string = "";
   status!: string;
 
-  constructor() { console.log("constructor worked!"); }
+  constructor() { console.log("parent constructor worked!"); }
 
   ngOnInit(): void {
     this.parentData = 0;
     this.childDataInParent = 0;
+    console.log("parent ngOnInit worked!");
   }
 
   onClick2Child() {
@@ -42,16 +43,16 @@ export class ParentComponent implements OnInit,
   }
   
   ngOnChanges() {
-    console.log("ngOnChanges worked!");
+    console.log("parent ngOnChanges worked!");
   }
   
   ngDoCheck() {
     console.log(this.textMessage);
-    console.log("ngDoCheck worked!");
+    console.log("parent ngDoCheck worked!");
   }
   
   ngAfterContentInit() {
-    console.log("ngAfterContentInit worked!");
+    console.log("parent ngAfterContentInit worked!");
   }
   
   ngAfterContentChecked() {
@@ -60,19 +61,19 @@ export class ParentComponent implements OnInit,
     } else {
       this.status = "Error";
     }
-    console.log("ngAfterContentChecked worked!");
+    console.log("parent ngAfterContentChecked worked!");
   }
   
   ngAfterViewInit() {
-    console.log("ngAfterViewInit worked!");
+    console.log("parent ngAfterViewInit worked!");
   }
   
   ngAfterViewChecked() {
-    console.log("ngAfterViewChecked worked!");
+    console.log("parent ngAfterViewChecked worked!");
   }
   
   ngOnDestroy() {
-    console.log("ngOnDestroy worked!");
+    console.log("parent ngOnDestroy worked!");
   }
 
   update() {

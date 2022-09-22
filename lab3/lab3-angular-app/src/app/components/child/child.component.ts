@@ -18,10 +18,12 @@ export class ChildComponent implements OnInit,
 
   childData!: number;
 
-  constructor() { console.log("constructor worked!"); }
+  constructor() { console.log("children constructor worked!"); }
 
   ngOnInit(): void {
     this.childData = 0;
+    console.log("children ngOnInit worked!");
+    
   }
 
   onClick2Parent() {
@@ -30,30 +32,30 @@ export class ChildComponent implements OnInit,
   }
 
   ngOnChanges() {
-    console.log("ngOnChanges worked!");
+    console.log("children ngOnChanges worked!");
   }
   
   ngDoCheck() {
-    console.log("ngDoCheck worked!");
+    console.log("children ngDoCheck worked!");
   }
   
   ngAfterContentInit() {
-    console.log("ngAfterContentInit worked!");
+    console.log("children ngAfterContentInit worked!");
   }
   
   ngAfterContentChecked() {
-    console.log("ngAfterContentChecked worked!");
+    console.log("children ngAfterContentChecked worked!");
   }
   
   ngAfterViewInit() {
-    console.log("ngAfterViewInit worked!");
+    console.log("children ngAfterViewInit worked!");
   }
   
   ngAfterViewChecked() {
-    console.log("ngAfterViewChecked worked!");
+    console.log("children ngAfterViewChecked worked!");
   }
   
   ngOnDestroy() {
-    console.log("ngOnDestroy worked!");
+    console.log("children ngOnDestroy worked!");
   }
 }
